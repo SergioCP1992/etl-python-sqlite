@@ -47,4 +47,17 @@ sqlite3 database/ecommerce.db
 SELECT * FROM pedidos LIMIT 5;
 .exit
 ``
+----------------------------------------
+🧠 Tecnologías
+
+Python 3
+Pandas
+SQLite (sqlite3 estándar de Python)
+---------------------------------------
+✅ Resultado
+
+Datos cargados en database/ecommerce.db
+Tablas: clientes, productos, pedidos
+Totales por pedido calculados
+Consultas analíticas básicas (top productos/clientes, ticket promedio)
 
