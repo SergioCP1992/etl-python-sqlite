@@ -1,45 +1,24 @@
 
-# Proyecto 3 – Pipeline ETL (Python → SQLite)
+"""
+Proyecto 3 — Pipeline ETL (Python → SQLite)
 
-Este proyecto implementa un pipeline **ETL profesional** utilizando Python, Pandas y SQLite.
+Este proyecto realiza un pipeline ETL sencillo:
+- Extract: lee CSV desde la carpeta /data
+- Transform: normaliza correos, valida precios y calcula el total de cada pedido
+- Load: guarda los datos limpios en database/ecommerce.db
 
-## 🚀 Objetivo
-Cargar datos desde archivos CSV, limpiarlos, transformarlos y almacenarlos en una base de datos SQLite para su análisis posterior.
-
-## 📁 Estructura del proyecto
-
-etl-python-sqlite/
+Estructura del proyecto:
+etl-python-sqlite-min/
 │── etl.py
-│── README.md
-│── data/
-│     ├── clientes.csv
-│     ├── productos.csv
-│     └── pedidos.csv
-└── database/
-└── ecommerce.db
+│── requirements.txt
+│── data/ (CSV)
+└── database/ (SQLite)
 
-## 🧠 Procesos del ETL
+Ejecutar:
+    python etl.py
 
-### 1. Extract
-Los datos se cargan desde archivos CSV ubicados en la carpeta `/data`.
-
-### 2. Transform
-- Normalización de correos electrónicos.
-- Validación y limpieza de precios.
-- Cálculo del total por pedido.
-- Validación de tipos de datos.
-
-### 3. Load
-Los datos limpios se cargan en una base de datos SQLite (`ecommerce.db`).
-
-## ▶ Ejecución
-
-python etl.py
-
-## 🛠 Tecnologías
-- Python 3
-- Pandas
-- SQLite
-
-## ⭐ Resultado
-Un pipeline ETL completo, modular y mantenible, ideal para análisis futuros y dashboards BI.
+Verificar BD (opcional, si tienes sqlite3):
+    sqlite3 database/ecommerce.db
+    .tables
+    SELECT * FROM pedidos;
+"""
