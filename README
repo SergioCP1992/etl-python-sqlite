@@ -33,3 +33,13 @@ Los datos se cargan desde archivos CSV ubicados en la carpeta `/data`.
 Los datos limpios se cargan en una base de datos SQLite (`ecommerce.db`).
 
 ## ▶ Ejecución
+
+python etl.py
+
+## 🛠 Tecnologías
+- Python 3
+- Pandas
+- SQLite
+
+## ⭐ Resultado
+Un pipeline ETL completo, modular y mantenible, ideal para análisis futuros y dashboards BI.
