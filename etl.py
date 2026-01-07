@@ -41,10 +41,7 @@ def run_etl():
     clientes, productos, pedidos = extract()
     clientes, productos, pedidos = transform(clientes, productos, pedidos)
     load(clientes, productos, pedidos)
-    print(f"ETL ejecutado con éxito → {DB_PATH}")
+    print(f"✅ ETL ejecutado con éxito → {DB_PATH}")
 
-# Permite que el archivo sea ejecutable como script,
-# pero también importable como módulo sin correr automáticamente.
 if __name__ == "__main__":
     run_etl()
-``
