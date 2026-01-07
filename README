@@ -61,3 +61,42 @@ Tablas: clientes, productos, pedidos
 Totales por pedido calculados
 Consultas analíticas básicas (top productos/clientes, ticket promedio)
 
+
+---
+
+## 📈 Diagrama de flujo ETL (simple, para incluir en README)
+
+Puedes pegar este **ASCII** debajo del README para que se vea claro:
+
+```text
+      +-----------------+
+      |   CSV /data     |
+      | clientes.csv     |
+      | productos.csv    |
+      | pedidos.csv      |
+      +---------+-------+
+                |
+                v
+        [ EXTRACT (pandas) ]
+                |
+                v
+    [ TRANSFORM (limpieza y totales) ]
+      - correos en minúsculas
+      - precios >= 0 (nulos -> 0)
+      - cantidad > 0
+      - fecha a YYYY-MM-DD
+      - total = cantidad * precio
+                |
+                v
+        [ LOAD (SQLite .db) ]
+          Tablas:
+          - clientes
+          - productos
+          - pedidos
+                |
+                v
+     [ ANALYTICS (queries SQL) ]
+      - ingresos por producto
+      - top clientes por gasto
+      - ticket promedio
+      - pedidos por fecha
