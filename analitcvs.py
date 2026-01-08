@@ -34,3 +34,5 @@ FROM pedidos
 WHERE fecha IS NOT NULL
 GROUP BY fecha
 ORDER BY fecha;
+
+--- Ejecutar sqlite3 database/ecommerce.db < analytics.sql
